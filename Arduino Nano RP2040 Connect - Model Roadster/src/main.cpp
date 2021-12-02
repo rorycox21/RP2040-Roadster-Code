@@ -12,8 +12,8 @@ void setup() {
   
   //PINOUT SETUP
   pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
+  pinMode(17, OUTPUT);
+  pinMode(6, OUTPUT);
   // begin initialization
   if (!BLE.begin()) {
     Serial.println("starting BLE failed!");
@@ -58,10 +58,10 @@ void loop() {
           digitalWrite(17, LOW);
         }
         if (steeringVal == 1){
-          digitalWrite(12, HIGH);
+          digitalWrite(6, HIGH);
         }
         if (steeringVal == 0){
-          digitalWrite(12, LOW);
+          digitalWrite(6, LOW);
         }
         Serial.print("Moror");
         Serial.println(motorVal);
